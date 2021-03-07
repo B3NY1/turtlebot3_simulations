@@ -2,6 +2,15 @@
 <sdf version="1.6">
   <world name="default">
 
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/demo</namespace>
+        <remapping>model_states:=model_states_demo</remapping>
+        <remapping>link_states:=link_states_demo</remapping>
+      </ros>
+      <update_rate>30.0</update_rate>
+    </plugin>
+
     <include>
       <uri>model://ground_plane</uri>
     </include>
@@ -51,7 +60,7 @@
     </model>
      
     <include>
-      <pose>-2.0 -0.5 0.01 0.0 0.0 0.0</pose>
+      <pose>-2.0 1.0 0.01 0.0 0.0 0.0</pose>
       <uri>model://turtlebot3_waffle</uri>
     </include>
 

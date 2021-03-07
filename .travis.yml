@@ -2,27 +2,25 @@ services:
   - docker
 
 language:
-  - generic
+  - none
 
 notifications:
   email:
     on_success: change
     on_failure: always
     recipients:
-      - willson@robotis.com
+      - pyo@robotis.com
+      - thlim@robotis.com
 
 branches:
   only:
     - ros2
     - ros2-devel
-    - foxy-devel
-    - galactic-devel
-
+    - dashing-devel
 
 install:
   - git clone --quiet --depth 1 https://github.com/ROBOTIS-GIT/ros2ci.git .ros2ci
 
 matrix:
   include:
-    - script: .ros2ci/travis.bash foxy
-    # - script: .ros2ci/travis.bash rolling
+    - script: .ros2ci/travis.bash dashing
