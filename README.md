@@ -1,3 +1,9 @@
+# IMPORTANT
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:<path-to-workspace>/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo/models/
+
+
+
+
 # TurtleBot3
 <img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/turtlebot3/logo_turtlebot3.png" width="300">
 
